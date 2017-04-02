@@ -30,3 +30,7 @@ RUN cd zephir && ./install -c
 RUN git clone --depth=1 git://github.com/phalcon/cphalcon.git
 RUN cd cphalcon && zephir build
 RUN echo "extension=phalcon.so" > /etc/php.d/phalcon.ini
+
+###Clean 
+
+RUN rm -rf zephir cphalcon
